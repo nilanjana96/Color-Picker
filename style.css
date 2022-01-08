@@ -1,0 +1,49 @@
+html{
+    height: 100vh;
+}
+body{
+    padding: 20px;
+    background-image: url(./images/colorPickerBg.jpg);
+    height: 100%;
+    background-size: cover;
+}
+.input {
+  border: 1px solid #333333;
+  width: 200px;
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px;
+  font-size: 16px;
+  margin: 0 auto;
+  margin-top: 15rem;
+}
+.editable {
+  border: 1px solid skyblue;
+}
+a {
+  height: fit-content;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+.colorpicker{
+    height: 200px;
+}
+.colorpicker .assignment {
+  position: relative;
+  height: 32px;
+  top: 14rem;
+  z-index: 13;
+  color: white;
+  background-color: #333333;
+  border-right: 3px solid #b1bdc8;
+  border-left: 3px solid #b1bdc8;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
