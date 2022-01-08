@@ -105,7 +105,7 @@ $(document).ready(function () {
         }
 
     });
-    ($("a#link")[0]).click(function () {
+    $("#link").click(function(){
         try {
             openModal();
         } catch (e) {
