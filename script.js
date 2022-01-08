@@ -20,6 +20,7 @@ $(document).ready(function () {
         try {
             console.log('inside key up function');
             hexColor = $(".input")[0].innerHTML;
+            console.log('hexColor',hexColor);
             let hexColorVal = hexColor.substring(1, hexColor.length);
             console.log(hexColorVal);
             console.log(hexColorVal.match(/^([A-Fa-f0-9]{6})$/));
