@@ -67,7 +67,7 @@ $(document).ready(function () {
     });
 
     // * function for opening the color picker modal on link click *//
-    $(".input").click(function () {
+    const openModal = () => {
         try {
             console.log(event.target);
             console.log($("a").length);
@@ -93,6 +93,21 @@ $(document).ready(function () {
             );
             $('.input').ColorPickerSetColor(hexColor);
             createDiv();
+        } catch (e) {
+            console.error(e);
+        }
+    }
+    $(".input").click(function () {
+        try {
+            openModal();
+        } catch (e) {
+            console.error(e);
+        }
+
+    });
+    $("a").click(function () {
+        try {
+            openModal();
         } catch (e) {
             console.error(e);
         }
