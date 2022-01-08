@@ -75,13 +75,13 @@ $(document).ready(function () {
                 {
                     onSubmit: function (hsb, hex, rgb, el) {
                         $("a")[0].innerHTML = '#' + hex;
-                        hexColor = $("a")[0].innerHTML;
+                        hexColor = '#' + hex;
                         createDiv();
                     },
                     onChange: function (hsb, hex, rgb) {
 
                         $("a")[0].innerHTML = '#' + hex;
-                        hexColor = $("a")[0].innerHTML;
+                        hexColor = '#' + hex;
                         createDiv();
                     }
                 }
