@@ -67,7 +67,7 @@ $(document).ready(function () {
     });
 
     // * function for opening the color picker modal on link click *//
-    $(".input").click(function () {
+    $(".input a").click(function () {
         try {
             console.log(event.target);
             console.log($("a").length);
