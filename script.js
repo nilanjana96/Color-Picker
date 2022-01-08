@@ -43,8 +43,6 @@ $(document).ready(function () {
                 $(`<a href>${hexColor}</a>`)
                     .appendTo('.input');
 
-            } else if (hexColorVal.length < 6) {
-                $('a').remove();
             }
         } catch (e) {
             console.error(e);
