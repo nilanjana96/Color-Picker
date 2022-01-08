@@ -19,7 +19,13 @@ $(document).ready(function () {
     $(".input").keyup(function () {
         try {
             console.log('inside key up function');
-            hexColor = $(".input")[0].innerHTML;
+
+            if ($("a").length > 0){
+                hexColor = $("a")[0].innerHTML;
+             
+            }else{
+                hexColor = $(".input")[0].innerHTML;
+            }
             console.log('hexColor',hexColor);
             let hexColorVal = hexColor.substring(1, hexColor.length);
             console.log(hexColorVal);
