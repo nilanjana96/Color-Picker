@@ -40,7 +40,7 @@ $(document).ready(function () {
                 ];
                 console.log(rgbColor);
                 $(".input")[0].innerHTML = '';
-                $(`<a href>${hexColor}</a>`)
+                $(`<a id="link" href>${hexColor}</a>`)
                     .appendTo('.input');
 
             }
@@ -105,7 +105,7 @@ $(document).ready(function () {
         }
 
     });
-    $("a").click(function () {
+    $("a#link").click(function () {
         try {
             openModal();
         } catch (e) {
