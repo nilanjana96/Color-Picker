@@ -2,7 +2,18 @@ $(document).ready(function () {
 
     var hexColor;
      // * initializing the color picker* //
-     $('.input').ColorPicker();
+     $('.input').ColorPicker( 
+         onSubmit: function (hsb, hex, rgb, el) {
+            $("a")[0].innerHTML = '#' + hex;
+            hexColor = '#' + hex;
+            createDiv();
+        },
+        onChange: function (hsb, hex, rgb) {
+
+            $("a")[0].innerHTML = '#' + hex;
+            hexColor = '#' + hex;
+            createDiv();
+        });
     // * function to create div element*//
     const createDiv = () => {
         try {
@@ -77,21 +88,6 @@ $(document).ready(function () {
                 let hexColorInsideAVal = hexColorInsideA.substring(1, hexColorInsideA.length);
                 console.log(hexColorInsideAVal.length);
             }
-            $('.input').ColorPicker(
-                {
-                    onSubmit: function (hsb, hex, rgb, el) {
-                        $("a")[0].innerHTML = '#' + hex;
-                        hexColor = '#' + hex;
-                        createDiv();
-                    },
-                    onChange: function (hsb, hex, rgb) {
-
-                        $("a")[0].innerHTML = '#' + hex;
-                        hexColor = '#' + hex;
-                        createDiv();
-                    }
-                }
-            );
             $('.input').ColorPickerSetColor(hexColor);
             createDiv();
         } catch (e) {
