@@ -99,19 +99,26 @@ $(document).ready(function () {
     }
     $(".input").click(function () {
         try {
-            openModal();
+            if ($("#link").length > 0){
+                $(".colorpicker").css("visibility", "visible");
+                openModal();
+            }else if($("#link").length === 0 && $(".colorpicker").length > 0){
+                
+                $(".colorpicker").css("visibility", "hidden");
+            }
+           
         } catch (e) {
             console.error(e);
         }
 
     });
-    $("#link").click(function(){
+   /* $("#link").click(function(){
         try {
             openModal();
         } catch (e) {
             console.error(e);
         }
 
-    });
+    });*/
 
 });
