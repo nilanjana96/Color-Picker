@@ -1,7 +1,8 @@
 $(document).ready(function () {
 
     var hexColor;
-
+     // * initializing the color picker* //
+     $('.input').ColorPicker();
     // * function to create div element*//
     const createDiv = () => {
         try {
