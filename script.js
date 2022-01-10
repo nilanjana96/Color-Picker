@@ -2,8 +2,8 @@ $(document).ready(function () {
 
     var hexColor;
      // * initializing the color picker* //
-     $('.input').ColorPicker( 
-         onSubmit: function (hsb, hex, rgb, el) {
+      $('.input').ColorPicker( {
+        onSubmit: function (hsb, hex, rgb, el) {
             $("a")[0].innerHTML = '#' + hex;
             hexColor = '#' + hex;
             createDiv();
@@ -13,7 +13,8 @@ $(document).ready(function () {
             $("a")[0].innerHTML = '#' + hex;
             hexColor = '#' + hex;
             createDiv();
-        });
+        }
+    });
     // * function to create div element*//
     const createDiv = () => {
         try {
